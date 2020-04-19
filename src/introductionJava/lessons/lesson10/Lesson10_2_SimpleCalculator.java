@@ -4,7 +4,7 @@ package introductionJava.lessons.lesson10;
     Мой мак быо разрушен полностью, пришлось купить БУ за 600$ и переставить жесткий диск
     На эти дни выпал из программирования чуть чуть)
  */
-public class Lesson10_1_SimpleCalculator {
+public class Lesson10_2_SimpleCalculator {
     private double firstNumber;
     private double secondNumber;
 
@@ -16,7 +16,7 @@ public class Lesson10_1_SimpleCalculator {
         this.secondNumber = secondNumber;
     }
 
-    public Lesson10_1_SimpleCalculator(double firstNumber, double secondNumber) {
+    public Lesson10_2_SimpleCalculator(double firstNumber, double secondNumber) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
     }
