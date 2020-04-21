@@ -49,7 +49,7 @@ public class Lesson10_HW_2 {
         for (int i = 0; i < array[row].length; i++) {
             result *= array[row][i];
         }
-        return result;
+        return (result < 0) ? -result : result;
     }
 
     private static void printIndex(int[][] temp) {

@@ -56,14 +56,31 @@ public class Lesson9_HW_1_ArrayDemo {
         return newArray;
     }
 
+//    private static void reverseArray(int[] array) {
+//        int length = array.length - 1;
+//        for (int i = 0; i < length; i++) {
+//            for (int j = 0; j < length-i; j++) {
+//                int tmp = array[j];
+//                array[j] = array[j + 1];
+//                array[j + 1] = tmp;
+//            }
+//        }
+//    }
     private static void reverseArray(int[] array) {
-        int length = array.length - 1;
-        for (int i = 0; i < length; i++) {
-            for (int j = 0; j < length-i; j++) {
-                int tmp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = tmp;
-            }
+        int[] copy = Arrays.copyOf(array, array.length);
+
+        for (int i = 0; i <= array.length-1; i++) {
+            int copyIndex = (array.length-1) - i;
+            array[i] = copy[copyIndex];
+        }
+    }
+    private static void reverseArrayTwo(int[] array) {  // same as reverseArray
+        for (int i = 0; i < array.length / 2; i++) {
+            int lastIndex = array[(array.length - 1) -i];
+
+            int tmp = array[i];
+            array[i] = array[lastIndex];
+            array[lastIndex] = tmp;
         }
     }
 
