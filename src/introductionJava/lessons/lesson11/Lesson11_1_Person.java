@@ -1,6 +1,6 @@
 package introductionJava.lessons.lesson11;
 
-public class Lesson10_1_Person {
+public class Lesson11_1_Person {
 
     private String firstName;
     private String lastName;
@@ -53,7 +53,7 @@ public class Lesson10_1_Person {
     }
 
     public static void main(String[] args) {
-        Lesson10_1_Person per = new Lesson10_1_Person();
+        Lesson11_1_Person per = new Lesson11_1_Person();
         per.setAge(10);
     }
 }
