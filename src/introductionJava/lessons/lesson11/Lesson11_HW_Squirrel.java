@@ -2,10 +2,6 @@ package introductionJava.lessons.lesson11;
 
 import java.io.*;
 
-/**
- * Я конечно понимаю, что разобрать будет трудновато, особенно метод getRegularity, но я сделал все возможное, что бы помочь разобраться ^-^
- */
-
 public class Lesson11_HW_Squirrel {
 
     private static String[] array = new String[90];
@@ -22,7 +18,10 @@ public class Lesson11_HW_Squirrel {
 
         System.out.println("Для корреляции > 0.1 или < -0.1");
         for (String word : uniqueWords) {           // получаем закономерность и выводим
-            getRegularity(word, onlyTrue, onlyFalse);
+            double fi = getFi(word, onlyTrue, onlyFalse);
+            if (fi > 0.1 || fi < -0.1) {
+                System.out.println(String.format("%-23s: %.5f", word, fi));
+            }
         }
     }
 
@@ -32,7 +31,7 @@ public class Lesson11_HW_Squirrel {
      * @param onlyTrue  массив со строками, в которых было превращение
      * @param onlyFalse массив со строками, в которых не было превращения
      */
-    private static void getRegularity(String word, String[] onlyTrue, String[] onlyFalse) {
+    private static double getFi(String word, String[] onlyTrue, String[] onlyFalse) {
         int noEventNoAction = getAllCasesNoEvent(word, onlyFalse);      // Нет события нет превращения
         int noEventIsAction = getAllCasesNoEvent(word, onlyTrue);       // Нет события есть превращения
         int isEventNoAction = getAllCasesWithEvent(word, onlyFalse);    // Есть событие нет превращение
@@ -43,7 +42,7 @@ public class Lesson11_HW_Squirrel {
                             (noEventNoAction + isEventNoAction) *
                             (isEventIsAction + isEventNoAction) *
                             (noEventNoAction + noEventIsAction));
-        System.out.println(String.format("%-23s: %.5f", word, fi));
+        return fi;
     }
 
     /**
