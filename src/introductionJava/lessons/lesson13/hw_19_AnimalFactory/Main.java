@@ -1,4 +1,4 @@
-package introductionJava.lessons.lesson13.HW_19_AnimalFactory;
+package introductionJava.lessons.lesson13.hw_19_AnimalFactory;
 
 import java.io.*;
 

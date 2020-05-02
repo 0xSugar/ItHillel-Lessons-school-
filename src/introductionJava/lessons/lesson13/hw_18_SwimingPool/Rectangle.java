@@ -1,4 +1,4 @@
-package introductionJava.lessons.lesson13.HW_18_SwimingPool;
+package introductionJava.lessons.lesson13.hw_18_SwimingPool;
 
 public class Rectangle {
     private double width;

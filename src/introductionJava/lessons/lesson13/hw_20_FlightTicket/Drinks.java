@@ -1,16 +1,14 @@
-package introductionJava.lessons.lesson13.HW_20_FlightTicket;
+package introductionJava.lessons.lesson13.hw_20_FlightTicket;
 
-public enum Menu {
-    SOUP(1, "Суп", 8),
-    VEGETABLES(2, "Овощи", 6),
-    MEAT(3, "Мясо", 10),
-    DESSERT(4, "Десерт", 7);
+public enum Drinks {
+    YES (1, "напитки включены", 5),
+    NO (0, "напитки не включены", 0);
 
     private int var;
     private String desctiption;
     private int price;
 
-    Menu(int var, String desctiption, int price) {
+    Drinks(int var, String desctiption, int price) {
         this.var = var;
         this.desctiption = desctiption;
         this.price = price;
@@ -28,7 +26,9 @@ public enum Menu {
         return price;
     }
 
+    @Override
     public String toString() {
-        return this.getDesctiption() + " $" + getPrice();
+        return this.getDesctiption() +
+                (this == Drinks.YES ? " ($" + getPrice() + ")" : "");
     }
 }

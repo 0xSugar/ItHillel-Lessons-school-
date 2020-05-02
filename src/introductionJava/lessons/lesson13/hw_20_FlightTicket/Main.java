@@ -1,4 +1,4 @@
-package introductionJava.lessons.lesson13.HW_20_FlightTicket;
+package introductionJava.lessons.lesson13.hw_20_FlightTicket;
 
 public class Main {
     public static void main(String[] args) {
