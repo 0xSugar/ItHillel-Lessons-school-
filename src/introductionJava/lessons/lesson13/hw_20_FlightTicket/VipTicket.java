@@ -10,9 +10,12 @@ public class VipTicket extends Ticket {
         this.baggage = baggage;
     }
 
+    @Override
     public int getCost() {
-        return super.getCost();
+        return super.getCost() + meal.getPrice() + baggage.getPrice();
     }
+
+
 
     public String toString() {
         return super.toString() + " + vip: \n" +
@@ -20,3 +23,4 @@ public class VipTicket extends Ticket {
                 "2) " + baggage + ".";
     }
 }
+

@@ -13,6 +13,10 @@ public class Baggage {
         return customFee;
     }
 
+    public int getPrice() {
+        return customFee * amount;
+    }
+
     @Override
     public String toString() {
         return "Багаж (кол-во = " + amount +

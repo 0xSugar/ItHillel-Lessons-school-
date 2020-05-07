@@ -17,7 +17,7 @@ public class AnimalFactory {
             case "cc" :
                 return new Cat("Снежок");
             default:
-                return null;
+                throw new RuntimeException("Null");
         }
     }
 }
